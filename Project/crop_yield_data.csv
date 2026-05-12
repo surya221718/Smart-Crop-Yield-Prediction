@@ -1,0 +1,101 @@
+Date,State,District,Crop Type,Area,Yield,Rainfall,Temperature,Soil Type,Fertilizer Used
+31-08-2024,Karnataka,District3,Rice,97.05,141.28,341.95,23.68,Sandy,210.44
+15-11-2023,Tamil Nadu,District3,Cotton,81.19,602.32,294.68,33.86,Sandy,133.62
+26-04-2023,Karnataka,District1,Wheat,7.18,477.95,756.14,32.09,Peaty,72.62
+10-05-2022,Maharashtra,District2,Cotton,88.09,707.27,67.11,25.87,Silty,131.41
+08-06-2023,Maharashtra,District1,Maize,35.51,738.63,354.21,38.34,Clayey,283.5
+09-04-2023,Uttar Pradesh,District1,Cotton,90.37,499.95,464.79,25.44,Sandy,213.66
+03-07-2023,Karnataka,District2,Wheat,48.35,521.63,219.57,39.07,Silty,212.5
+10-12-2024,Karnataka,District2,Cotton,82.09,408.95,443.25,38.56,Silty,324.88
+30-01-2022,Uttar Pradesh,District4,Cotton,32.55,632.25,898.72,25.38,Peaty,208.66
+06-07-2024,Tamil Nadu,District4,Rice,10.77,439.95,558.22,27.67,Sandy,307.53
+27-02-2024,Punjab,District3,Wheat,25.38,210.02,281.26,22.34,Loamy,386.08
+11-01-2024,Maharashtra,District3,Rice,70.65,389.66,214.86,35.42,Sandy,262.33
+27-02-2023,Maharashtra,District3,Wheat,49.3,117.36,74.76,17,Sandy,121.2
+04-04-2024,Uttar Pradesh,District1,Wheat,22.85,188.27,636.62,28.39,Clayey,108.58
+08-08-2022,Punjab,District3,Cotton,35.77,333.7,725.05,27.74,Loamy,381.98
+12-01-2024,Maharashtra,District2,Rice,57.4,789.65,491.82,23.92,Clayey,388.66
+19-04-2022,Maharashtra,District2,Rice,79.97,732.47,336.71,11.82,Peaty,271.26
+05-09-2022,Karnataka,District1,Cotton,7.77,556.32,413.01,18.27,Silty,146.53
+03-01-2022,Karnataka,District3,Wheat,77,296.67,797.96,12.16,Silty,403.95
+02-07-2024,Tamil Nadu,District2,Rice,97.88,395.6,637.67,22.27,Peaty,445.42
+11-02-2023,Punjab,District2,Wheat,11.41,405.91,623.6,14.24,Loamy,76.28
+06-09-2023,Punjab,District2,Rice,8.52,675.09,659.91,21.62,Clayey,316.35
+23-11-2024,Punjab,District2,Sugarcane,86.13,613.81,361.17,13.93,Sandy,55.21
+13-10-2022,Tamil Nadu,District5,Cotton,90.38,622.18,609.22,36.34,Clayey,81.06
+04-03-2024,Maharashtra,District2,Rice,9.12,285.99,625.14,38.5,Clayey,258.41
+31-08-2022,Punjab,District3,Maize,88.73,438.78,982.72,32.72,Sandy,484.42
+18-09-2024,Maharashtra,District3,Wheat,15.11,781.04,51.11,30.44,Sandy,326.72
+07-09-2024,Uttar Pradesh,District1,Wheat,8.71,550.89,362.73,22.1,Peaty,319.15
+06-12-2022,Maharashtra,District2,Cotton,84.71,205.4,874.88,25.75,Silty,460.69
+25-12-2024,Maharashtra,District1,Rice,92.19,528.16,448.5,37.66,Silty,87.47
+03-04-2022,Tamil Nadu,District4,Sugarcane,36.12,768.85,726.62,31.29,Sandy,121.48
+10-04-2023,Uttar Pradesh,District4,Rice,86.95,507.27,697.92,36.51,Peaty,155.49
+11-08-2024,Karnataka,District3,Wheat,93.65,599.07,400.07,19.72,Loamy,172.77
+04-08-2023,Karnataka,District5,Cotton,12.62,666.19,871.33,12.42,Loamy,155.76
+31-12-2022,Uttar Pradesh,District2,Cotton,68.87,797.64,68.21,34.26,Silty,62.58
+12-01-2022,Maharashtra,District1,Sugarcane,90.38,799.91,279.34,23.71,Peaty,373.56
+16-10-2023,Punjab,District1,Rice,48.78,768.75,937.17,16.12,Clayey,303.61
+25-05-2023,Karnataka,District4,Wheat,96.12,520.35,807.86,35.97,Loamy,259.34
+22-07-2023,Maharashtra,District1,Cotton,62.82,766.63,783.98,25.06,Peaty,55.58
+06-11-2022,Punjab,District3,Rice,88.81,609.6,699.54,28.68,Silty,243.46
+08-12-2022,Uttar Pradesh,District2,Cotton,41.02,600.15,166.99,23.52,Peaty,435.28
+26-04-2023,Punjab,District2,Rice,38.37,371.8,99.33,35.79,Sandy,278.22
+02-07-2022,Punjab,District2,Cotton,32.57,603.74,370.39,23.93,Silty,381.4
+05-08-2022,Karnataka,District4,Sugarcane,33.88,661.74,119.61,11.2,Silty,456.65
+05-03-2024,Tamil Nadu,District5,Sugarcane,98.36,797.2,439.98,20.5,Loamy,284.34
+28-05-2022,Karnataka,District1,Maize,24.46,168.81,702.68,28.11,Loamy,345.69
+09-07-2023,Karnataka,District3,Cotton,97.36,546.37,56.78,25.03,Loamy,110.71
+06-02-2024,Tamil Nadu,District2,Wheat,63.65,661.01,119.8,18.67,Peaty,259.07
+04-11-2022,Maharashtra,District3,Maize,78.47,612.23,349.89,29.15,Loamy,339.99
+26-05-2023,Karnataka,District3,Rice,22.82,523.99,302.08,10.21,Peaty,54.91
+24-12-2022,Punjab,District3,Cotton,7.33,722.32,634.51,32.49,Sandy,86.69
+07-07-2022,Uttar Pradesh,District5,Cotton,86.95,591.46,488.79,23.82,Peaty,246.51
+02-08-2024,Karnataka,District4,Rice,54.93,239.79,334.68,13.4,Sandy,442.81
+09-09-2023,Punjab,District2,Sugarcane,80.57,192.48,799.07,22.87,Silty,329.22
+07-11-2022,Punjab,District1,Maize,68.27,365.8,312.36,33.02,Peaty,356.39
+05-09-2024,Uttar Pradesh,District1,Rice,70.96,585,866.08,11.34,Peaty,91.52
+01-04-2023,Maharashtra,District1,Maize,75.56,706.43,486.11,22.06,Peaty,120.85
+15-06-2024,Maharashtra,District1,Wheat,60.07,601.3,498.94,14.72,Loamy,336.39
+11-03-2022,Maharashtra,District1,Maize,10.35,108.98,659.68,32.7,Sandy,173.42
+26-02-2024,Tamil Nadu,District4,Sugarcane,53.06,672.04,414.92,20.11,Clayey,298.15
+27-04-2024,Tamil Nadu,District4,Rice,85.86,135.8,749.78,14.95,Sandy,72.83
+01-11-2022,Uttar Pradesh,District2,Wheat,36.5,667.34,223.54,18.98,Peaty,92.75
+28-12-2022,Karnataka,District4,Sugarcane,46.21,182.47,842.57,29.39,Loamy,163.82
+07-03-2023,Maharashtra,District1,Cotton,66.59,353.4,191.85,25.04,Peaty,61.6
+30-12-2022,Tamil Nadu,District1,Maize,80.39,425.39,685.89,18.33,Sandy,436.13
+10-04-2024,Punjab,District1,Wheat,83.41,547.05,410.74,40,Silty,240.81
+04-02-2022,Uttar Pradesh,District1,Wheat,71.65,640.25,647.81,36,Peaty,479.31
+22-10-2023,Maharashtra,District2,Cotton,31.06,677.02,597.81,21.12,Peaty,98.06
+28-02-2023,Maharashtra,District3,Cotton,59.63,647.17,572.15,18.04,Sandy,186.1
+30-01-2024,Uttar Pradesh,District3,Cotton,51.88,730.84,986.44,17.13,Sandy,360.66
+31-05-2023,Karnataka,District4,Maize,15.04,542.36,186.06,38.83,Loamy,169.9
+20-03-2024,Uttar Pradesh,District5,Rice,12.46,668.7,323.21,17.95,Sandy,241.54
+28-09-2023,Uttar Pradesh,District4,Cotton,61.17,635.02,197.94,21.13,Loamy,363.04
+27-01-2024,Maharashtra,District3,Sugarcane,83.49,247.44,600.97,27.44,Clayey,188.31
+26-05-2022,Uttar Pradesh,District4,Wheat,54.11,597.17,857.47,31.15,Peaty,56.29
+06-06-2023,Maharashtra,District1,Cotton,60,480.01,334.14,10.57,Silty,175.18
+02-12-2022,Karnataka,District2,Cotton,33.93,222.32,154.93,10.65,Silty,152.11
+19-11-2023,Punjab,District1,Sugarcane,44.2,377.63,244.28,30.42,Peaty,206.7
+17-12-2023,Maharashtra,District3,Maize,10.77,742.93,950.27,25.46,Clayey,358.52
+07-08-2022,Tamil Nadu,District3,Cotton,43.55,627.37,132.22,14.47,Peaty,421.71
+20-12-2023,Punjab,District1,Sugarcane,35.85,482.91,92.85,27.24,Silty,266.03
+26-12-2023,Maharashtra,District2,Maize,78.91,416.38,409.75,30.52,Peaty,383.88
+03-03-2022,Tamil Nadu,District2,Cotton,40.96,795.18,556.31,20.77,Sandy,91.77
+28-01-2024,Tamil Nadu,District4,Maize,87.37,242.65,886.6,25.29,Loamy,95.19
+16-06-2022,Karnataka,District5,Maize,59.12,153.97,781.3,28.3,Clayey,115.01
+11-07-2024,Maharashtra,District1,Wheat,29.24,784.67,823.3,10.67,Clayey,419.88
+02-06-2023,Maharashtra,District2,Maize,82.1,274.72,442.06,26.11,Clayey,245.14
+20-03-2023,Tamil Nadu,District4,Maize,81.52,763.01,479.45,39.96,Sandy,350.21
+13-12-2022,Punjab,District2,Wheat,9.14,606.21,586.93,30.44,Clayey,231.46
+14-03-2023,Karnataka,District2,Cotton,99.36,111.07,327,15.54,Loamy,137.47
+06-02-2023,Uttar Pradesh,District5,Wheat,89.91,630.86,793.76,20.56,Peaty,110.37
+09-08-2023,Uttar Pradesh,District4,Cotton,38.42,648.61,918.45,37.62,Sandy,356.27
+29-09-2022,Punjab,District2,Sugarcane,52.08,261.76,690.25,21.21,Silty,496.46
+09-08-2024,Uttar Pradesh,District5,Wheat,30.87,629.89,920.53,23.53,Loamy,486.94
+15-02-2024,Karnataka,District4,Maize,65.85,421.18,115.16,35.83,Silty,387.16
+22-12-2023,Maharashtra,District1,Maize,45.18,280.04,90.21,39.12,Sandy,342.39
+18-06-2023,Karnataka,District2,Maize,18.02,380.13,106.96,21.69,Peaty,310.46
+01-06-2024,Karnataka,District3,Maize,70.34,629.74,258.13,28.15,Loamy,435.8
+21-11-2023,Uttar Pradesh,District3,Rice,35.45,312.1,994.21,10.76,Loamy,253.25
+31-03-2024,Punjab,District3,Maize,35.49,379.26,925.79,32.55,Silty,308.74

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Crop Yield Prediction</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .loading-spinner {
+            display: none;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/296230/pexels-photo-296230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); background-attachment: fixed;">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-green-700 mb-2">
+                <i class="fas fa-leaf mr-2"></i>
+                Smart Crop Yield Prediction
+            </h1>
+            <p class="font-bold text-black-600">Predict crop yields based on environmental factors</p>
+        </header>
+
+        <!-- Main Form -->
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <form id="predictionForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="state">State</label>
+                    <select id="state" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="crop">Crop Type</label>
+                    <select id="crop" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        <option value="">Select Crop</option>
+                        <option value="Rice">Rice</option>
+                        <option value="Wheat">Wheat</option>
+                        <option value="Maize">Maize</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Soybean">Soybean</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="temperature">Temperature (°C)</label>
+                    <input type="number" id="temperature" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="between: 0–55" step="0.1" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="rainfall">Rainfall (mm)</label>
+                    <input type="number" id="rainfall" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="e.g. 500" step="1" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2" for="soil_type">Soil Type</label>
+                    <select id="soil_type" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" required>
+                        <option value="Loamy">Loamy</option>
+                        <option value="Sandy">Sandy</option>
+                        <option value="Clayey">Clayey</option>
+                        <option value="Silty">Silty</option>
+                        <option value="Peaty">Peaty</option>
+                    </select>
+                </div>
+
+                <div class="flex justify-between">
+                    <button type="button" id="resetBtn" class="px-4 py-2 bg-gray-300 text-gray-800 rounded-lg hover:bg-gray-400 transition">
+                        <i class="fas fa-redo mr-2"></i>Reset
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                        <i class="fas fa-calculator mr-2"></i>Predict Yield
+                    </button>
+                </div>
+            </form>
+
+            <!-- Loading Spinner -->
+            <div id="loadingSpinner" class="loading-spinner my-4"></div>
+
+            <!-- Results Section -->
+            <div id="results" class="mt-6 hidden">
+                <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 text-green-500">
+                            <i class="fas fa-chart-line text-2xl"></i>
+                        </div>
+                        <div class="ml-3">
+                            <h3 class="text-lg font-medium text-green-800">Predicted Yield</h3>
+                            <div class="mt-1 text-green-700">
+                                <p id="yieldValue" class="text-2xl font-bold">0</p>
+                                <p id="yieldDetails" class="text-sm mb-4"></p>
+                                <div class="w-full bg-gray-200 rounded-full h-4">
+                                    <div id="yieldBar" class="bg-green-600 h-4 rounded-full" style="width: 0%"></div>
+                                </div>
+                                <p class="text-xs text-gray-600 mt-1 text-right" id="yieldPercentage">0% of max potential</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const loadingSpinner = document.getElementById('loadingSpinner');
+            const results = document.getElementById('results');
+            const yieldValue = document.getElementById('yieldValue');
+            const yieldDetails = document.getElementById('yieldDetails');
+            const yieldBar = document.getElementById('yieldBar');
+            const yieldPercentage = document.getElementById('yieldPercentage');
+
+            loadingSpinner.style.display = 'block';
+            results.classList.add('hidden');
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        state: document.getElementById('state').value,
+                        crop: document.getElementById('crop').value,
+                        temperature: parseFloat(document.getElementById('temperature').value),
+                        rainfall: parseFloat(document.getElementById('rainfall').value),
+                        soil_type: document.getElementById('soil_type').value
+                    })
+                });
+
+                if (!response.ok) throw new Error('Prediction failed');
+
+                const data = await response.json();
+                const crop = document.getElementById('crop').value;
+                const state = document.getElementById('state').value;
+                const maxYield = 10000; // For percentage visualization
+                const percentage = Math.min(100, Math.round((data.yield / maxYield) * 100));
+
+                yieldValue.textContent = `${data.yield.toFixed(2)} kg/ha`;
+                yieldDetails.textContent = `${crop} in ${state} has a predicted yield based on input factors.`;
+                yieldBar.style.width = `${percentage}%`;
+                yieldPercentage.textContent = `${percentage}% of max potential`;
+
+                results.classList.remove('hidden');
+            } catch (error) {
+                alert("Error: " + error.message);
+            } finally {
+                loadingSpinner.style.display = 'none';
+            }
+        });
+
+        document.getElementById('resetBtn').addEventListener('click', () => {
+            document.getElementById('predictionForm').reset();
+            document.getElementById('results').classList.add('hidden');
+            document.getElementById('yieldBar').style.width = '0%';
+            document.getElementById('yieldValue').textContent = '0';
+            document.getElementById('yieldDetails').textContent = '';
+            document.getElementById('yieldPercentage').textContent = '0% of max potential';
+        });
+    </script>
+</body>
+</html>
